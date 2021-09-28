@@ -1,0 +1,20 @@
+{
+  "name": "opthy-v0-tests",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opthydefi/opthy-v0-tests.git"
+  },
+  "license": "MIT",
+  "author": "Phroi (https://phroi.com/)",
+  "dependencies": {
+    "@polyjuice-provider/web3": "0.0.1-rc9",
+    "dotenv": "10.0.0",
+    "web3": "^1.4.0",
+    "opthy-v0-core": "https://github.com/opthydefi/opthy-v0-core#4962683"
+  },
+  "scripts": {
+    "start": "node -r dotenv/config index.js"
+  }
+}
