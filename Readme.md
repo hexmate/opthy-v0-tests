@@ -19,7 +19,7 @@ Usage:
     Same goes for `OT_ERC20_0_ADDRESS` and `OT_ERC20_1_ADDRESS`.
 - `yarn start`
 
-### Status: Polyjuice: ok
+### Status: Polyjuice: ok using testERC20
 
 Using the following `.env`, which uses an account on testnets which holds enough CKB:
 
@@ -65,6 +65,51 @@ Sleeping for 300 seconds
 Calling reclaim...
 Txn Hash: 0x817f1203c79726d60116b80279309e450045fb28cb6ff3c77a3f6153e77294ed
 Done in 442.57s.
+```
+
+### Status: Polyjuice: ok using ckETH SUDT proxy and testERC20
+
+Using the following `.env`, which uses an account on testnets which holds enough CKB and ETH, and an already deployed Opthys, ckETH SUDT proxy and testERC20:
+
+```
+OT_ACCOUNT_PRIVATE_KEY=<YOUR-ETHEREUM-PRIVATE-KEY>
+OT_NETWORK=Polyjuice
+OT_OPTHYS_ADDRESS=0x768033EB1E0A2b4bC0e793ff798f17a3F51218bc
+OT_ERC20_0_ADDRESS=0x84220609e42b51c9aEf056Da0A06983746974291
+OT_ERC20_1_ADDRESS=0x273344254166EEf74D0222de7d95Fe08684E1b62
+```
+
+Gives the follwing output:
+```log
+$ node -r dotenv/config index.js
+Using Polyjuice network with default RPC URL
+Calling web3.eth.getBalance...
+Balance of 0x9d23e5D38C31DF9FF11512e40f43a2a4Fa7a3b41 = 413493189857
+Opthys on address: 0x768033EB1E0A2b4bC0e793ff798f17a3F51218bc
+ERC20 Token 0 on address: 0x84220609e42b51c9aEf056Da0A06983746974291
+Calling approve on ERC20...
+Txn Hash: 0x0ca725b460ba2a489cb71e30b2c9f85164afd20a91641272ebd53d8854380f0f
+ERC20 Token 1 on address: 0x273344254166EEf74D0222de7d95Fe08684E1b62
+Calling newOpthy...
+Txn Hash: 0x311a64429b4db8384abfa0edc95f85bf8dd1fbc2802f7396316236bba722163c
+Calling getOpthys...
+Opthy deployed on address: 0x7113554F9E78c0a662BC44f1DfB4cc6E3e244706
+Calling approve on ERC20...
+Txn Hash: 0x28a743dcbade08abebe209039006b01fe699b11a528a6985e827858a27cd7c9b
+Calling approve on ERC20...
+Txn Hash: 0x0e2f1b54478c9d808ee6b24804c6bf4c66be2789fe2e9c2cf7d7c6e807b98a9c
+Calling update...
+Txn Hash: 0x03bcf4cfb482323a11ff49507a79a33709b3c7870e9f8c12f7fe07087b573b83
+Calling agree...
+Txn Hash: 0x4d72dde01b1d88895cd2f650bcaa0f22895f08660b8e18bebdab4ea079b945ea
+Calling swap...
+Txn Hash: 0x443fca4a1d4b4ef80fe72f2f7ff1fc0ee3a93941c5f4197e4d9cd8fa90b92f0a
+Calling swap...
+Txn Hash: 0xe9c0df96ef4f1c07a7780e03cd656f7804d302fc3b19119c8bed27285fa58f3d
+Sleeping for 300 seconds
+Calling reclaim...
+Txn Hash: 0x19ec35babfb4e8cf375818ec54a9a14f502407e147001a92e326d3042816a456
+Done in 459.03s.
 ```
 
 ### Status on Rinkeby: ok
