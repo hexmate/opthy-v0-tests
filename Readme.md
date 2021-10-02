@@ -121,36 +121,36 @@ Gives the follwing output:
 $ node -r dotenv/config index.js
 Using Rinkeby network with default RPC URL
 Calling web3.eth.getBalance...
-Balance of 0x9d23e5D38C31DF9FF11512e40f43a2a4Fa7a3b41 = 55463669427707307
+Balance of 0x9d23e5D38C31DF9FF11512e40f43a2a4Fa7a3b41 = 38560988275670500
 Calling deploy of a contract...
-Txn Hash: 0xe9da49ab6c4799ad321f8edafc7cb0e140b83f8025633cf3d863cff1dbbc7e69
-Opthys on address: 0xa07ccBe80B9064e2461aCa001F9778a62A48e10f
+Txn Hash: 0xdff3c2e2c3a5f12b2337fc03f9efa2ab9dbe57a9e3aefc1aa512d6f7b1e7e679
+Opthys on address: 0x558c1f3ADC1A20E8Be8052840360Edd1020DB88f
 Calling deploy of a contract...
-Txn Hash: 0x05683094571b676d9aa71570ff85ce55aa2216dfea3de7efce5e163895655304
-ERC20 Token 0 on address: 0xe312e7c688E61d14691d7f7AA4c4D76fa5747e97
+Txn Hash: 0xc7a49bfa3fd517fc190749600f424aef1b7863320cd54f9e0c126648264f2b90
+ERC20 Token 0 on address: 0xe987E26f3a677A3d265Ba15e04Cae0DD3eE477Cc
 Calling approve on ERC20...
-Txn Hash: 0x6d2a99595daedaacfc1d8433d1ee20e00dc38942144c8261571661230bbdc3b1
+Txn Hash: 0x7dc6ed02869cd9fb181f639794065b021c02f263e17845ad65d3b0a752a1aeff
 Calling deploy of a contract...
-Txn Hash: 0x4c9103da5b0d597e050eea0a079f4c7d73b565f3ec80688f74d83148e4c092c6
-ERC20 Token 1 on address: 0x55d88e70d0c68427725c19AF797Ccc4C77BE16FD
+Txn Hash: 0xa0a938d9d6091ed397d1aeaf897d246b8984947f6ddf4c5b0ff6f174c4bfd492
+ERC20 Token 1 on address: 0xb2FB10957Ca26c7bF8e82646DAA5Bd77DA20B13E
 Calling newOpthy...
-Txn Hash: 0x614f2ab7d1b8a4ab4c6cb21522ea85b82c46aa4f56679ba992cb7bddc83194b6
+Txn Hash: 0x188ec7ddc112d99d6d251f7f8e20ba455f2ca2cc35f3965fb170968a2ad75372
 Calling getOpthys...
-Opthy deployed on address: 0xc7DF4114529116b3Ffd8B42932F283b7aBB2a85F
+Opthy deployed on address: 0x304B014a3db63fC8DAf41030284Cd42A52bCadA0
 Calling approve on ERC20...
-Txn Hash: 0x505ab6a376018c4d2ffb9ee686c9389c0a8e1af74bf7940c12b2b55b980fa13f
+Txn Hash: 0xc3729941bbcca23389be73c053a5a014a410758cd763e786c2597479b8ddfd3d
 Calling approve on ERC20...
-Txn Hash: 0xbeecf9d2ab9d238bb1c6ff96c145e69d121e885085397b621f7557ff5d16431a
+Txn Hash: 0xd535d025fa447c24b2dbf889a0d300e9cdf236f94322a2abee95fddf61a48469
 Calling update...
-Txn Hash: 0xed7799aedb68b59aa51c89bf1d73013e0db0168bbc6a877bc13b7cb4d52d0d5b
+Txn Hash: 0x72e5a9ac8b49210859b4462fe81382c2dbc7956c416d47788baa1a00862f73bd
 Calling agree...
-Txn Hash: 0xca4be5272b5b0b700e27ffaf2c0104b40c9f1a4af83594e71e7507367975591c
+Txn Hash: 0x63c8f41eaac94f20167ccecf766f9bc1b086534c8477f2a301731bedaf6cd741
 Calling swap...
-Txn Hash: 0x20aa8246a1362bf9d541962434219cdf7536d495aea4da8cd4236ce6f6d868b5
+Txn Hash: 0xe09ccd2f82a48aab0272109b11f5f0e9dda3471b57e51f88772d06d3aa097824
 Calling swap...
-Txn Hash: 0xe98217c31e3726aa4dc530e9c1cd83b161a2f25fe0c2d82af7b120c5d21ad1b2
+Txn Hash: 0x0765d72b10c69e33763884a3f3e22ac103cc7a5a0032eeef17ecb17aea124f53
 Sleeping for 300 seconds
 Calling reclaim...
-Txn Hash: 0x8603db9d17f676f84609c55113f61d800013baff936469277f3fb9bf6ed7eee0
-Done in 476.67s.
+Txn Hash: 0x0bb565b67fd04662d39d1ddf4c3197eb4a8bc0a44e7469d41e3b66d22a2e2b5f
+Done in 479.49s.
 ```
