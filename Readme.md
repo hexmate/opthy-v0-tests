@@ -14,13 +14,15 @@ Usage:
     Same goes for `OT_ERC20_0_ADDRESS` and `OT_ERC20_1_ADDRESS`.
 - `yarn start`
 
-### Status: Polyjuice: ok using testERC20
+### Status: Polyjuice: ok
 
-Using the following `.env`, which uses an account on testnets which holds enough CKB:
+Using the following `.env`, which uses an account on testnets which holds enough CKB, ckDAI and ckETH:
 
 ```
 OT_ACCOUNT_PRIVATE_KEY=<YOUR-ETHEREUM-PRIVATE-KEY>
 OT_NETWORK=Polyjuice
+OT_ERC20_0_ADDRESS=0x034f40c41Bb7D27965623f7bb136CC44D78be5E7
+OT_ERC20_1_ADDRESS=0xC818545C50a0E2568E031Ef9150849b396992880
 ```
 
 Gives the follwing output:
@@ -28,84 +30,36 @@ Gives the follwing output:
 $ node -r dotenv/config index.js
 Using Polyjuice network with default RPC URL
 Calling web3.eth.getBalance...
-Balance of 0x9d23e5D38C31DF9FF11512e40f43a2a4Fa7a3b41 = 413490376999
+Balance of 0x9d23e5D38C31DF9FF11512e40f43a2a4Fa7a3b41 = 653485334822
 Calling deploy of a contract...
-Txn Hash: 0x0efad83460c96bd5ebcd704bdf604a2550698a0a760ee17fb278779ebee5980e
-Opthys on address: 0x085d9cE0e895D138af16fc0a080fa4159B0233c9
-Calling deploy of a contract...
-Txn Hash: 0x1f0533b37d99b9bde522fcab3b86a23857ee3e25240abf68943799931a39defa
-ERC20 Token 0 on address: 0x2111223bcD62293AF5c487FCcEe6ddAf4e5E4c5D
+Txn Hash: 0x3f379854ffcd83f55281005ac32644ef0877c2b8fec7cd54a9baf324fb62e7d7
+Opthys on address: 0x3Cb3bDF756266fbCA2b7485787A94761d67100B3
+ERC20 Token 0 on address: 0x034f40c41Bb7D27965623f7bb136CC44D78be5E7
 Calling approve on ERC20...
-Txn Hash: 0x8bcbd6422744400817427d47d2049cede7234e343b61841e4a6ff0b93f6f4560
-Calling deploy of a contract...
-Txn Hash: 0x024d80f0973769e3cce435355373584637b4a7e3d45789d1cf4ba13ce5a6fd72
-ERC20 Token 1 on address: 0x5D14C33AFCd72C755610Da87246a56b6FddB22dd
+Txn Hash: 0xa88a2f6aae66857039cc78de46fc0413def86deeb9d5420e6217cd948818bd03
+ERC20 Token 1 on address: 0xC818545C50a0E2568E031Ef9150849b396992880
 Calling newOpthy...
-Txn Hash: 0x233e8df01a6c6868610f05d395f2acf763328aae309528b2119ebbbf20bd4e0b
+Txn Hash: 0xcc09aac6341d2a8cd1d790395f59138386bf7edfa8ce114e033deffb149a22c6
 Calling getOpthys...
-Opthy deployed on address: 0x583591b3C28c82dca328cC0048FE3e98ad8E29EE
+Opthy deployed on address: 0x4778F9E6F376676b76bDF26d18734963336aC945
 Calling approve on ERC20...
-Txn Hash: 0xe8e5c106981ffeb2c3ecd066e408c0ec4f921f43f96c15e6c063dc009905244f
+Txn Hash: 0x1d0f999d5a3af34fd9fc00979ca8f3e121ffca730a67234a7ea16dad9f2ba70a
 Calling approve on ERC20...
-Txn Hash: 0xce59e3292f5e873bd7459d7eda6944f2cc8f65b7250aaa5146b737cddb9d11f1
+Txn Hash: 0xbfdada2d382b5e3e5ea01958f2b32a027655f39962f2f2cea431867d24ca86e3
 Calling update...
-Txn Hash: 0x7e226b7ab3601a862e32ef01eda997ef0b8b885ad24783c7b986747c3698eeeb
+Txn Hash: 0x2562ed4913fcc9e031d70f943c3a44c4ff4ac15c1517b29b9269779d49d48ae0
 Calling agree...
-Txn Hash: 0xa9428bb4290cb9b54e18f661f592ec0502b50763dd4df0e445a44c400fb950ab
+Txn Hash: 0x3e3b22dafad3ff9bc4062af7c23c792d306c3342fafe4322f33e5db4391a2203
 Calling swap...
-Txn Hash: 0x2e1790dc70e3e2ccc88ba7a625348a378bd9a64c7ba8501fdd1789c6a4051aa2
+Txn Hash: 0x0bee5c60e5e8147857d277c8e1e6088dfb95e6d08af8cec4b3ec317fd3eb9b92
 Calling swap...
-Txn Hash: 0x5c2fe9a74e44e41fb3ee35cde6b48e2061c0da6ce542d36372bf2589325c131c
+Txn Hash: 0x892a8f821404cb8389d22229f52005e47beb11fd7b11b5f13bba0ab37ada7f3f
 Sleeping for 300 seconds
 Calling reclaim...
-Txn Hash: 0xb56edd7bb5cfdc7fa0dec22be65d4781a7a008d8b9b047d5ba43c2d5a422b14d
-Done in 439.57s.
+Txn Hash: 0x8a124b04a05c0bb8d47d60b26a9f8de271a1c23047a8ba05dc191363d7b56e4f
+Done in 412.40s.
 ```
 
-### Status: Polyjuice: ok using ckETH SUDT proxy and testERC20
-
-Using the following `.env`, which uses an account on testnets which holds enough CKB and ETH, and an already deployed Opthys, ckETH SUDT proxy and testERC20:
-
-```
-OT_ACCOUNT_PRIVATE_KEY=<YOUR-ETHEREUM-PRIVATE-KEY>
-OT_NETWORK=Polyjuice
-OT_OPTHYS_ADDRESS=0x768033EB1E0A2b4bC0e793ff798f17a3F51218bc
-OT_ERC20_0_ADDRESS=0x84220609e42b51c9aEf056Da0A06983746974291
-OT_ERC20_1_ADDRESS=0x273344254166EEf74D0222de7d95Fe08684E1b62
-```
-
-Gives the follwing output:
-```log
-$ node -r dotenv/config index.js
-Using Polyjuice network with default RPC URL
-Calling web3.eth.getBalance...
-Balance of 0x9d23e5D38C31DF9FF11512e40f43a2a4Fa7a3b41 = 413493189857
-Opthys on address: 0x768033EB1E0A2b4bC0e793ff798f17a3F51218bc
-ERC20 Token 0 on address: 0x84220609e42b51c9aEf056Da0A06983746974291
-Calling approve on ERC20...
-Txn Hash: 0x0ca725b460ba2a489cb71e30b2c9f85164afd20a91641272ebd53d8854380f0f
-ERC20 Token 1 on address: 0x273344254166EEf74D0222de7d95Fe08684E1b62
-Calling newOpthy...
-Txn Hash: 0x311a64429b4db8384abfa0edc95f85bf8dd1fbc2802f7396316236bba722163c
-Calling getOpthys...
-Opthy deployed on address: 0x7113554F9E78c0a662BC44f1DfB4cc6E3e244706
-Calling approve on ERC20...
-Txn Hash: 0x28a743dcbade08abebe209039006b01fe699b11a528a6985e827858a27cd7c9b
-Calling approve on ERC20...
-Txn Hash: 0x0e2f1b54478c9d808ee6b24804c6bf4c66be2789fe2e9c2cf7d7c6e807b98a9c
-Calling update...
-Txn Hash: 0x03bcf4cfb482323a11ff49507a79a33709b3c7870e9f8c12f7fe07087b573b83
-Calling agree...
-Txn Hash: 0x4d72dde01b1d88895cd2f650bcaa0f22895f08660b8e18bebdab4ea079b945ea
-Calling swap...
-Txn Hash: 0x443fca4a1d4b4ef80fe72f2f7ff1fc0ee3a93941c5f4197e4d9cd8fa90b92f0a
-Calling swap...
-Txn Hash: 0xe9c0df96ef4f1c07a7780e03cd656f7804d302fc3b19119c8bed27285fa58f3d
-Sleeping for 300 seconds
-Calling reclaim...
-Txn Hash: 0x19ec35babfb4e8cf375818ec54a9a14f502407e147001a92e326d3042816a456
-Done in 459.03s.
-```
 
 ### Status on Rinkeby: ok
 
@@ -121,36 +75,37 @@ Gives the follwing output:
 $ node -r dotenv/config index.js
 Using Rinkeby network with default RPC URL
 Calling web3.eth.getBalance...
-Balance of 0x9d23e5D38C31DF9FF11512e40f43a2a4Fa7a3b41 = 38560988275670500
+Balance of 0x9d23e5D38C31DF9FF11512e40f43a2a4Fa7a3b41 = 21251712017124260
 Calling deploy of a contract...
-Txn Hash: 0xdff3c2e2c3a5f12b2337fc03f9efa2ab9dbe57a9e3aefc1aa512d6f7b1e7e679
-Opthys on address: 0x558c1f3ADC1A20E8Be8052840360Edd1020DB88f
+Txn Hash: 0xb8d5b14db2bc45d9846c84b206fbbb243fb92bfe727136cf2a26aaa8b38ee61f
+Opthys on address: 0xAF0331D79697335305da49943B52Caafaf2A06A4
 Calling deploy of a contract...
-Txn Hash: 0xc7a49bfa3fd517fc190749600f424aef1b7863320cd54f9e0c126648264f2b90
-ERC20 Token 0 on address: 0xe987E26f3a677A3d265Ba15e04Cae0DD3eE477Cc
+Txn Hash: 0x5eb02b41cc5b2067ec1025b4dceb8b66ee6dd4ef53205a5818aae196bf99de6c
+ERC20 Token 0 on address: 0x208eaABc92cD36AACE290Df0242932b9EF933a84
 Calling approve on ERC20...
-Txn Hash: 0x7dc6ed02869cd9fb181f639794065b021c02f263e17845ad65d3b0a752a1aeff
+Txn Hash: 0x94e83c67605332139000818f3939ded3f2ff737aa60b423e77b04a55ea10b7ad
 Calling deploy of a contract...
-Txn Hash: 0xa0a938d9d6091ed397d1aeaf897d246b8984947f6ddf4c5b0ff6f174c4bfd492
-ERC20 Token 1 on address: 0xb2FB10957Ca26c7bF8e82646DAA5Bd77DA20B13E
+Txn Hash: 0x015c85ebe23860ac6f13ebeb96aa0a89b839b38b4ea9c08481e54cabdc8a3d02
+ERC20 Token 1 on address: 0xC48238c8ad4e30f93FFD46007E5e040fbEd3571E
 Calling newOpthy...
-Txn Hash: 0x188ec7ddc112d99d6d251f7f8e20ba455f2ca2cc35f3965fb170968a2ad75372
+Txn Hash: 0xeb77f9708570eb1fad2bf56d53299a1d0946c9a3ff4a69ed5dc6da9aaa7e5340
 Calling getOpthys...
-Opthy deployed on address: 0x304B014a3db63fC8DAf41030284Cd42A52bCadA0
+Opthy deployed on address: 0x7746C2d44bc45a7c9bDC32E6199efC74DfCa9775
 Calling approve on ERC20...
-Txn Hash: 0xc3729941bbcca23389be73c053a5a014a410758cd763e786c2597479b8ddfd3d
+Txn Hash: 0x4653bacc83a1df78270eeef0d844a0f51c6299c3790b7d8813cc58e40f5d89e0
 Calling approve on ERC20...
-Txn Hash: 0xd535d025fa447c24b2dbf889a0d300e9cdf236f94322a2abee95fddf61a48469
+Txn Hash: 0x01ccdf34ed96ec17b6c4eff08cd0ce3cc1dda9976b665fb62a898a158782d97b
 Calling update...
-Txn Hash: 0x72e5a9ac8b49210859b4462fe81382c2dbc7956c416d47788baa1a00862f73bd
+Txn Hash: 0xa8247b50219b9b36ee2a3e919e580a276730f57b9261a07bf256a391efacbc8a
 Calling agree...
-Txn Hash: 0x63c8f41eaac94f20167ccecf766f9bc1b086534c8477f2a301731bedaf6cd741
+Txn Hash: 0xb10c6aa0dc76829cd43335fc701d5bfac936df86ba092d57e60add79f5ebfd2c
 Calling swap...
-Txn Hash: 0xe09ccd2f82a48aab0272109b11f5f0e9dda3471b57e51f88772d06d3aa097824
+Txn Hash: 0x01850f9a054511e3ec9ac04cd7e0ca7aa71d8d61e6cc46baf65b3988e07d19b1
 Calling swap...
-Txn Hash: 0x0765d72b10c69e33763884a3f3e22ac103cc7a5a0032eeef17ecb17aea124f53
+Txn Hash: 0x47b768e40db3e4cedda28495e3601fe203ae6256e29533ffd4518c7b6871f0e0
 Sleeping for 300 seconds
 Calling reclaim...
-Txn Hash: 0x0bb565b67fd04662d39d1ddf4c3197eb4a8bc0a44e7469d41e3b66d22a2e2b5f
-Done in 479.49s.
+Txn Hash: 0xd4c5902b7ea9e7d871110dbac859e36083d0362aba8f828c4d41ae08ccaf1296
+Done in 486.62s.
+
 ```
